@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+source: https://trust.unraveldata.com/
+url: https://trust.unraveldata.com/
+platform: Conveyor
+certifications:
+- SOC 2 Type II
+page_keywords_unverified:
+- ISO 27001
+- ISO 27017
+- ISO 27018
+- HIPAA
+- FedRAMP
+- GDPR
+evidence:
+- source: https://trust.unraveldata.com/
+  kind: trust-center
+  keywords:
+  - soc 2
+  - soc2
+  - hipaa
+  - fedramp
+  - trust center
+  - gdpr
+  note: >-
+    "Unravel Data Trust Center | Powered by Conveyor" — HTTP 200. The page's
+    embedded Conveyor vendor-report JSON carries generic questionnaire
+    boilerplate (e.g. "Do they have a current SOC 2 Type II Report to share?"),
+    so keyword hits for ISO 27001/27017/27018, HIPAA, FedRAMP, and GDPR may
+    come from platform copy rather than Unravel-published badges; they are
+    recorded as unverified page keywords, not confirmed certifications.
+    Security/compliance documents (SOC 2 report, DPA, subprocessor list) sit
+    behind the Conveyor access-request data room.
+- source: https://www.unraveldata.com/privacy-security-faq/
+  kind: security-faq
+  note: >-
+    Provider states: "Unravel is SOC 2-compliant, and has earned a Service
+    Organization Control (SOC) 2, Type II certification." Also documents TLS in
+    transit, AES-256 at rest, AWS hosting, and that Unravel collects only
+    telemetry/performance metadata (no access to customer data lakes).
+- source: https://www.unraveldata.com/resources/unravel-earns-prestigious-soc-2-security-certification
+  kind: press-release
+  note: SOC 2 Type II audit performed by A-LIGN Assurance.

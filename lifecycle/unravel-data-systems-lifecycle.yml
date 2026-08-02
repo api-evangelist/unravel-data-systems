@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  Unravel documentation version selectors and release-notes sections
+  (docs.unraveldata.com / unravel-docs.unraveldata.com per-release trees);
+  probes for a public status page.
+versioning:
+  api:
+    scheme: uri-path
+    current: v1
+    notes: REST API versioned in the path (/api/v1).
+  product:
+    scheme: four-part release trains, documented per platform
+    current: 4.8.2.7 (Snowflake); 4.8.2.x (GCP-BigQuery and Snowflake)
+    trains:
+      - 4.8.1.x (GCP-BigQuery and Snowflake)
+      - 4.8.2.x (GCP-BigQuery and Snowflake)
+      - 4.8.2.3 (Snowflake)
+      - 4.8.2.4 (Snowflake)
+      - 4.8.2.5 (Snowflake)
+      - 4.8.2.7 (Snowflake)
+    docs: https://docs.unraveldata.com/unravel-v4827x/en/current.html
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No public deprecation policy or RFC 8594 Sunset/Deprecation header support is documented.
+sla:
+  url: null
+  notes: No public SLA or uptime target is published.
+status_page: null
+status_page_notes: >-
+  No public status page was found (status.unraveldata.com does not resolve);
+  the Conveyor trust-center questionnaire includes a live-status-page indicator
+  but no populated link.
+release_notes: https://docs.unraveldata.com/unravel-v482x/en/rn-4820.html
+changelog: changelog/unravel-data-systems-changelog.yml

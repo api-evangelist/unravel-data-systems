@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  http://unravel-docs.unraveldata.com/unravel-v4823x/en/on-prem-apis.html
+  (Unravel REST APIs documentation) — no machine-readable OpenAPI is published,
+  so this profile is taken from the docs rather than derived from
+  securitySchemes.
+docs: http://unravel-docs.unraveldata.com/unravel-v4823x/en/on-prem-apis.html
+summary:
+  types: [sessionToken]
+  oauth2_flows: []
+  notes: Session-token authentication; no OAuth2/OIDC surface on the product API.
+schemes:
+  - name: signInSessionToken
+    type: apiKey
+    description: >-
+      Authenticate with POST /signIn against the deployment's API base
+      (https://unravel-host:3000/api/v1). The Unravel server returns a session
+      token which must be included in all subsequent requests. Access level is
+      determined by the caller's RBAC role. All requests and responses are
+      JSON over HTTP or HTTPS.
+  - name: webUiSso
+    type: enterprise-sso
+    description: >-
+      The Unravel web UI (not the REST API) supports LDAP authentication and
+      SAML single sign-on, configured per deployment; JSON web token (JWT)
+      secrets used by the platform can be rotated by administrators.
+    scope: web-ui
+rbac:
+  supported: true
+  notes: >-
+    Role-based access control with role types and user tags; API access level
+    follows the authenticated user's RBAC role.

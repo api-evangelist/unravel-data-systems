@@ -1,0 +1,34 @@
+# Unravel Data
+
+> Unravel helps modern data teams optimize, troubleshoot, and govern their data pipelines with AI-powered data platform optimization and FinOps insights.
+
+## Core Pages
+
+- [Home](https://www.unraveldata.com/)
+- [Platform Overview](https://www.unraveldata.com/platform/platform-overview/)
+- [Purpose-Built AI](https://www.unraveldata.com/platform/purpose-built-ai/)
+- [Company](https://www.unraveldata.com/company/)
+
+## Solutions by Technology
+
+- [Databricks Optimization](https://www.unraveldata.com/solutions/technologies/databricks/)
+- [Databricks Performance Optimization](https://www.unraveldata.com/solutions/technologies/databricks-performance-optimization/)
+- [Snowflake Optimization](https://www.unraveldata.com/solutions/technologies/snowflake/)
+- [Snowflake Performance Optimization](https://www.unraveldata.com/solutions/technologies/snowflake-performance-optimization/)
+- [Google BigQuery Optimization](https://www.unraveldata.com/solutions/technologies/google-cloud-bigquery/)
+- [Amazon EMR](https://www.unraveldata.com/solutions/technologies/amazon-emr/)
+
+## Solutions by Use Case
+
+- [Cloud Cost Management](https://www.unraveldata.com/solutions/use-cases/cloud-cost-management/)
+- [Troubleshooting](https://www.unraveldata.com/solutions/use-cases/troubleshooting/)
+- [Optimization](https://www.unraveldata.com/solutions/use-cases/optimization/)
+- [AutoFix & Prevention](https://www.unraveldata.com/solutions/use-cases/autofix-prevention/)
+
+## Resources
+
+- [AI Agents for Data Teams](https://www.unraveldata.com/resources/ai-agents-empower-data-teams-with-actionability-for-transformative-results/)
+- [Data Actionability Webinar](https://www.unraveldata.com/resources/data-actionability-webinar/)
+- [Databricks Data Observability Solutions](https://www.unraveldata.com/resources/databricks-data-observability-solutions/)
+- [Snowflake Data Observability Buyer's Guide](https://www.unraveldata.com/resources/snowflake-data-observability-buyers-guide/)
+- [Databricks Cost Optimization](https://www.unraveldata.com/insights/databricks-cost-optimization/)

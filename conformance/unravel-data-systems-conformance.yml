@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  Unravel product documentation
+  (http://unravel-docs.unraveldata.com/unravel-v4823x/en/on-prem-apis.html and
+  configuration pages) and https://www.unraveldata.com/privacy-security-faq/.
+  No OpenAPI is published, so assertions come from documented behavior.
+standards:
+  - id: rest-json
+    conforms: true
+    evidence: >-
+      REST API docs state all requests and responses are JSON over HTTP/HTTPS
+      and the API adheres to standard CRUD semantics (base
+      https://unravel-host:3000/api/v1).
+  - id: oauth2
+    conforms: false
+    evidence: API uses a proprietary POST /signIn session token, not OAuth 2.0.
+  - id: oidc
+    conforms: false
+    evidence: No OpenID Connect surface; /.well-known/openid-configuration returns 404.
+  - id: saml
+    conforms: true
+    evidence: >-
+      "Enabling SAML authentication for Unravel Web UI" — SAML SSO supported
+      for the web UI (deployment-configured).
+  - id: ldap
+    conforms: true
+    evidence: '"Enabling LDAP authentication for Unravel UI" documented in configuration guide.'
+  - id: jwt
+    conforms: true
+    evidence: '"Rotating the JSON web token (JWT) secret" — platform session tokens are JWTs with rotatable secrets.'
+  - id: tls
+    conforms: true
+    evidence: >-
+      "Configuring HTTPS for Unravel (Transport Layer Security, TLS)"
+      documented; privacy-security FAQ states TLS in transit and AES-256 at
+      rest.
+  - id: rbac
+    conforms: true
+    evidence: Role-based Access Control (role types, user tags) governs API and UI access.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No application/problem+json error format documented.
+  - id: soc2-type-ii
+    conforms: true
+    evidence: >-
+      SOC 2 Type II certification (A-LIGN audit) stated at
+      https://www.unraveldata.com/privacy-security-faq/ and in the Unravel
+      trust center (https://trust.unraveldata.com/).

@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: http://unravel-docs.unraveldata.com/unravel-v4827x/en/notification-channels-page.html
+type: Webhooks
+spec_type: null
+description: >-
+  Unravel publishes no AsyncAPI document, but it documents an outbound
+  event/notification surface: alerting and AutoAction violations are delivered
+  to customer-configured notification channels, including generic webhooks.
+direction: outbound
+channels:
+  - name: Email
+    transport: smtp
+    config: SMTP server configured via the manager CLI (./manager config email smtp <server> <port>).
+  - name: Slack
+    transport: webhook
+    config: Slack Incoming WebHooks — paste the Slack webhook URL into the Slack Webhook URL field.
+  - name: Microsoft Teams
+    transport: email or webhook
+    config: >-
+      Either the Teams channel's email address, or an Incoming Webhook
+      connector URL pasted into the channel configuration.
+  - name: Custom webhook
+    transport: webhook
+    config: >-
+      Generic channel type ("In the Channel type, select Custom webhook") that
+      POSTs alert notifications to a customer-supplied URL.
+events:
+  - AutoAction policy violations and alerting notifications (cluster metrics, cost, and app conditions), per configured AutoAction rules.
+notes: >-
+  Payload schemas and signing headers are not publicly documented; no AsyncAPI
+  document exists to harvest, so this artifact records the documented webhook
+  catalog only.

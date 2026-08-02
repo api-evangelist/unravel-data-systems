@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  http://unravel-docs.unraveldata.com/unravel-v4823x/en/api-token.html and the
+  "Manager commands" / "Managing Unravel services or daemons" sections of the
+  Unravel documentation.
+name: unravel manager
+scope: >-
+  First-party administration CLI bundled with every self-hosted Unravel
+  deployment (not a hosted-API consumer CLI). It manages the platform that
+  serves the REST API.
+install:
+  - method: bundled
+    detail: Ships inside the Unravel installation at <Unravel installation directory>/unravel/manager.
+commands:
+  - group: service
+    commands:
+      - name: manager start
+        description: Start Unravel services/daemons.
+      - name: manager stop
+        description: Stop Unravel services/daemons.
+  - group: config
+    commands:
+      - name: manager config properties set <property> <value>
+        description: >-
+          Set platform properties, e.g. com.unraveldata.api.access.tokens.store
+          </path/to/JSON file> to persist API authorization tokens across
+          restarts.
+      - name: manager config apply
+        description: Apply pending configuration changes.
+key_flows:
+  - name: Persist API authorization tokens
+    steps:
+      - Stop Unravel (manager stop).
+      - Set com.unraveldata.api.access.tokens.store to a JSON file path readable only by the Unravel user.
+      - Apply changes (manager config apply) and start Unravel (manager start).
+      - Create API tokens from the Unravel UI; they now survive server restarts.
+notes: >-
+  Documentation also covers an Interactive Precheck utility for installation
+  and healthcheck tooling; no standalone consumer CLI is published to package
+  registries.

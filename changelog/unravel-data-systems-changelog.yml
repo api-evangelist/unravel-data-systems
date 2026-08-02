@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  Per-release documentation trees and release notes at docs.unraveldata.com /
+  unravel-docs.unraveldata.com (version selector: 4.8.1.x, 4.8.2.x, 4.8.2.3,
+  4.8.2.4, 4.8.2.5, 4.8.2.7).
+scheme: >-
+  Four-part product release trains published per platform (Snowflake,
+  GCP-BigQuery); each release gets its own documentation tree and release-notes
+  page. No dated public changelog page; recency is expressed by release train.
+current_version: 4.8.2.7 (Snowflake)
+release_notes_index: https://docs.unraveldata.com/unravel-v4827x/en/current.html
+entries:
+  - version: 4.8.2.3
+    scope: Snowflake
+    url: http://unravel-docs.unraveldata.com/unravel-v4823x/en/rn.html
+    highlights:
+      - Dedicated Snowflake release train (Cost 360, warehouses, queries, data pages).
+  - version: 4.8.2.2
+    date: '2023-12-01'
+    scope: GCP-BigQuery and Snowflake
+    url: https://docs.unraveldata.com/unravel-v482x/en/rn-4822.html
+    highlights:
+      - Unravel Standard (Free) account supported and certified for GCP-BigQuery and Snowflake.
+      - 90-second default timeout for the OpenSearch connector in pyunravel (BIGQ-909).
+  - version: 4.8.2.1
+    date: '2023-11-22'
+    scope: GCP-BigQuery and Snowflake
+    url: https://docs.unraveldata.com/unravel-v482x/en/rn-4821.html
+    highlights:
+      - Unravel SaaS supported and certified for GCP-BigQuery and Snowflake.
+    breaking:
+      - In-place upgrade to this release is not supported; fresh installation required.
+  - version: 4.8.2.0
+    scope: GCP-BigQuery and Snowflake
+    url: https://docs.unraveldata.com/unravel-v482x/en/rn-4820.html
+    highlights:
+      - New BigQuery polling method based on INFORMATION_SCHEMA significantly improves job-data latency to the Unravel UI.
+      - Cost page adds a Tags tab for cost chargeback and cost trends by tag key/value.
+notes: >-
+  Dates are recorded where the release-notes page publishes them ("Release
+  date: ..."); entries without a date have none published.

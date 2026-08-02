@@ -1,0 +1,51 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  http://unravel-docs.unraveldata.com/unravel-v4823x/en/on-prem-apis.html,
+  http://unravel-docs.unraveldata.com/unravel-v4823x/en/default-post-signin.html,
+  http://unravel-docs.unraveldata.com/unravel-v4823x/en/api-token.html
+description: >-
+  Cross-cutting request/response semantics of the Unravel REST API, taken from
+  the product documentation. No OpenAPI is published, so only documented
+  behavior is recorded.
+base_url: https://unravel-host:3000/api/v1
+api_style: REST over HTTP/HTTPS, JSON requests and responses, standard CRUD semantics
+authentication:
+  scheme: >-
+    Session token from POST /signIn ({"username","password"} -> {"message",
+    "token","role","tags","id","username"}), or admin-issued API authorization
+    tokens (Client Id + Admin/User role + optional tags) created in the
+    Unravel UI. Tokens are JWT-based; the JWT secret is rotatable. API tokens
+    are ephemeral unless com.unraveldata.api.access.tokens.store is configured.
+  detail: authentication/unravel-data-systems-authentication.yml
+authorization:
+  model: RBAC
+  notes: Access level of every API call follows the authenticated user's RBAC role and user tags.
+idempotency:
+  supported: false
+  notes: No idempotency-key mechanism is documented.
+pagination:
+  style: undocumented
+  notes: No cross-cutting pagination convention is documented for the REST API.
+field_expansion:
+  supported: false
+  notes: Not documented.
+request_tracing:
+  supported: false
+  notes: No request-id header convention is documented.
+versioning:
+  scheme: uri-path
+  current: v1
+  notes: >-
+    API is versioned in the path (/api/v1). Platform capability follows the
+    product release train (4.8.1.x, 4.8.2.x; 4.8.2.7 is the current Snowflake
+    release); docs are published per release train.
+  detail: lifecycle/unravel-data-systems-lifecycle.yml
+error_envelope:
+  shape: undocumented
+  notes: >-
+    Success responses carry a "message" field (e.g. {"message":"ok", ...}); no
+    structured error catalog or application/problem+json format is documented.
+rate_limits:
+  signaling: undocumented
+  notes: No rate-limit headers or quotas are documented for the REST API.

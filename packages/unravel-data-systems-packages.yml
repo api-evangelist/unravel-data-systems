@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  npm registry search (registry.npmjs.org), PyPI (pypi.org/pypi/<name>/json for
+  unravel, unraveldata, unravel-data, unravel-client), and the unraveldata-org
+  GitHub organization (github.com/unraveldata-org).
+packages: []
+notes: >-
+  No first-party Unravel Data client libraries or SDKs were found on npm or
+  PyPI. Similarly-named packages belong to other projects: PyPI "unravel" is a
+  Doppler-radar dealiasing library (vlouf/dealias), PyPI "unravel-client" is
+  unravel.finance's crypto client, and npm "unravel-mcp" / "@unravel/unravel-cli"
+  are unrelated third-party projects. The unraveldata-org GitHub organization
+  publishes deployment tooling (unravel-terraform-scripts, auto-serve,
+  snowflake-data-loader, BigQuery-data-loader, tagging scripts) and forks of
+  upstream projects (btrace, airflow, elasticsearch-py) rather than API client
+  SDKs. Unravel's REST API is consumed directly over HTTP with a signIn session
+  token; no official SDK is shipped.

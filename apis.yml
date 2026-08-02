@@ -1,7 +1,13 @@
 aid: unravel-data-systems
 name: Unravel Data Systems
-description: Unravel Data Systems is a company surfaced as a portfolio company of a16z and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Unravel Data Systems is an AI-powered data observability and FinOps platform
+  that helps data teams optimize performance, cost, and reliability across
+  modern data stacks including Databricks, Snowflake, BigQuery, Amazon EMR, and
+  Cloudera. The self-hosted and SaaS platform exposes a REST API (JSON over
+  HTTP, session-token authentication via /signIn, RBAC-scoped) for querying
+  application performance, cluster operations, chargeback, anomaly detection,
+  and pipeline data collected by its observability engine.
 url: https://raw.githubusercontent.com/api-evangelist/unravel-data-systems/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +15,113 @@ x-backed-by:
 - a16z
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://cdn.prod.website-files.com/69c4c9c7f795b263782ef5be/69c754b2bfc0db573c3c6e36_9869e478efb1fecc6dafa9f6cb79fb13_global-og-image.jpg
 tags:
-- Company
-apis: []
+- Data Observability
+- FinOps
+- DataOps
+- Databricks
+- Snowflake
+- BigQuery
+- Cost Optimization
+- Performance
+apis:
+- aid: unravel-data-systems:unravel-rest-api
+  name: Unravel REST API
+  description: >-
+    REST API for the Unravel data observability platform. Query and collect
+    data from your monitored clusters and workspaces over HTTP/HTTPS with JSON
+    requests and responses. Endpoint groups cover applications (summaries,
+    recommendations, errors, logs), apps search and events, on-demand reports,
+    queue analysis, chargeback, operations (cluster nodes and resource
+    allocation), anomaly detection, and pipelines. Authentication is via a
+    session token returned by POST /signIn; access level is determined by the
+    caller's RBAC role. The API is served by each Unravel deployment (default
+    base https://unravel-host:3000/api/v1) rather than a shared public cloud
+    host.
+  humanURL: http://unravel-docs.unraveldata.com/unravel-v4823x/en/on-prem-apis.html
+  baseURL: https://unravel-host:3000/api/v1
+  tags:
+  - Observability
+  - DataOps
+  - Reports
+  - Chargeback
+  - Anomaly Detection
+  - Pipelines
+  properties:
+  - type: Documentation
+    url: http://unravel-docs.unraveldata.com/unravel-v4823x/en/on-prem-apis.html
+  - type: APIReference
+    url: http://unravel-docs.unraveldata.com/unravel-v4823x/en/on-prem-apis.html
+common:
+- type: DomainSecurity
+  url: security/unravel-data-systems-domain-security.yml
+- type: Website
+  url: https://www.unraveldata.com/
+- type: Documentation
+  url: https://docs.unraveldata.com/
+- type: Blog
+  url: https://www.unraveldata.com/blog/
+- type: Support
+  url: https://www.unraveldata.com/support/
+- type: GitHubOrganization
+  url: https://github.com/unraveldata-org
+- type: Pricing
+  url: https://www.unraveldata.com/pricing/
+- type: TermsOfService
+  url: https://www.unraveldata.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.unraveldata.com/privacy-policy/
+- type: Contact
+  url: https://www.unraveldata.com/contact-us/
+- type: TrustCenter
+  url: security/unravel-data-systems-trust-center.yml
+- type: Compliance
+  url: https://www.unraveldata.com/privacy-security-faq/
+- type: LLMsTxt
+  url: llms/unravel-data-systems-llms.txt
+- type: WellKnown
+  url: well-known/unravel-data-systems-well-known.yml
+- type: Packages
+  url: packages/unravel-data-systems-packages.yml
+- type: Authentication
+  url: authentication/unravel-data-systems-authentication.yml
+- type: Conformance
+  url: conformance/unravel-data-systems-conformance.yml
+- type: Conventions
+  url: conventions/unravel-data-systems-conventions.yml
+- type: Lifecycle
+  url: lifecycle/unravel-data-systems-lifecycle.yml
+- type: ChangeLog
+  url: changelog/unravel-data-systems-changelog.yml
+- type: CLI
+  url: cli/unravel-data-systems-cli.yml
+- type: Login
+  url: https://customers.unraveldata.com/login
+- type: Webhooks
+  url: asyncapi/unravel-data-systems-webhooks.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1

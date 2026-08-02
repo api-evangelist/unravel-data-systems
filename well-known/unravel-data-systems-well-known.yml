@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: HTTP probes of https://www.unraveldata.com and https://docs.unraveldata.com
+hosts:
+  - host: https://www.unraveldata.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /llms.txt
+        status: 200
+        file: ../llms/unravel-data-systems-llms.txt
+        note: Provider-published llms.txt saved verbatim under llms/.
+  - host: https://docs.unraveldata.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /llms.txt
+        status: 404
+notes: >-
+  No RFC 9116 security.txt, OIDC discovery, OAuth authorization-server metadata,
+  api-catalog, or ai-plugin.json documents are published on the Unravel Data
+  website or docs hosts. The only well-known-style discovery document found is
+  /llms.txt on www.unraveldata.com (HTTP 200), captured verbatim in
+  llms/unravel-data-systems-llms.txt. The Unravel product API itself is
+  self-hosted per deployment (https://unravel-host:3000/api/v1), so there is no
+  public API host to probe.
