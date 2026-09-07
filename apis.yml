@@ -137,3 +137,5 @@ x-enrichment:
   status: enriched
   artifacts_added: 12
   pass: local-v1
+x-parent: unravel-data
+x-relationship: product
