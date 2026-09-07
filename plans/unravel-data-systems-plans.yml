@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unraveldata.com/ (Pricing & contracts FAQ) + https://www.unraveldata.com/platform/pricing-options
+pricing_url: https://www.unraveldata.com/platform/pricing-options
+plan_count: 1
+plans:
+- name: Annual subscription
+  model: >-
+    Priced as an annual subscription based on the size of the connected data
+    platform environment (compute footprint across connected platforms).
+  includes:
+  - Unlimited users (no per-seat fees)
+  - Unlimited applications and workloads
+  - Unlimited API calls
+  - Unlimited optimization actions and integrations
+  notes: >-
+    Docs FAQ states most customers see 5-10x return relative to subscription
+    cost; quotes are environment-based (talk to the team).
+trial:
+  type: proof-of-concept
+  duration: 2-4 weeks
+  notes: >-
+    Structured POC engagement for enterprise prospects - connects to one
+    production environment and produces a quantified savings estimate. Free
+    health-check assessments offered for Databricks and Snowflake.
+enterprise_features:
+- VPC peering / PrivateLink (Enterprise plans)
+- Customer-managed encryption keys (CMEK) for the metadata store (Enterprise plans)
+- SCIM provisioning (Enterprise plans)
+- EU-region deployment for data residency

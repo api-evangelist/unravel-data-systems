@@ -81,6 +81,12 @@ apis:
   - type: APIReference
     url: http://unravel-docs.unraveldata.com/unravel-v4823x/en/on-prem-apis.html
 common:
+- type: Plans
+  url: plans/unravel-data-systems-plans.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/unravel-data
+- type: YouTube
+  url: https://www.youtube.com/c/UnravelData
 - type: DomainSecurity
   url: security/unravel-data-systems-domain-security.yml
 - type: Website
@@ -137,5 +143,3 @@ x-enrichment:
   status: enriched
   artifacts_added: 12
   pass: local-v1
-x-parent: unravel-data
-x-relationship: product
