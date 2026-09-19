@@ -72,6 +72,13 @@ apis:
   - Observability
   - DataOps
   - Reports
+  - Chargebacks
+  - Anomaly Detection
+  - Pipelines
+  tags_raw:
+  - Observability
+  - DataOps
+  - Reports
   - Chargeback
   - Anomaly Detection
   - Pipelines
