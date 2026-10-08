@@ -28,3 +28,15 @@ enterprise_features:
 - Customer-managed encryption keys (CMEK) for the metadata store (Enterprise plans)
 - SCIM provisioning (Enterprise plans)
 - EU-region deployment for data residency
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Annual subscription
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
